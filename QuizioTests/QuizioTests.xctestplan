@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "E629B403-62D0-425A-9344-9418B7A31966",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Quizio.xcodeproj",
+        "identifier" : "55903B903022886600C132B9",
+        "name" : "QuizioTests"
+      }
+    }
+  ],
+  "version" : 1
+}
