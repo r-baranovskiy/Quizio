@@ -1,0 +1,2 @@
+BASE_URL = "https://opentdb.com/api.php"
+API_KEY = 123
