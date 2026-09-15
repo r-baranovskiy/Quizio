@@ -12,6 +12,7 @@ struct QuizioApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            let provider = QuizProvider()
         }
     }
 }
