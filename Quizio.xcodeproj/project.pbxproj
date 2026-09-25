@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55FDB8663059C93D00649A69 /* NetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 55FDB8653059C93D00649A69 /* NetworkLayer */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		55903B953022886600C132B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,11 +23,28 @@
 /* Begin PBXFileReference section */
 		55903A2B30227FB600C132B9 /* Quizio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55903B913022886600C132B9 /* QuizioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FDB8603059C55A00649A69 /* Quizio/Core/App/AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Quizio/Core/App/AppConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		55FDB85F3059C55A00649A69 /* Exceptions for "Quizio" folder in "Quizio" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Core/App/AppConfig.local.xcconfig,
+				Core/App/AppConfig.xcconfig,
+				Core/App/Info.plist,
+				Core/Services/NetworkLayer,
+			);
+			target = 55903A2A30227FB500C132B9 /* Quizio */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		55903A2D30227FB600C132B9 /* Quizio */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55FDB85F3059C55A00649A69 /* Exceptions for "Quizio" folder in "Quizio" target */,
+			);
 			path = Quizio;
 			sourceTree = "<group>";
 		};
@@ -39,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FDB8663059C93D00649A69 /* NetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +79,9 @@
 			children = (
 				55903A2D30227FB600C132B9 /* Quizio */,
 				55903B923022886600C132B9 /* QuizioTests */,
+				55FDB8613059C90900649A69 /* Frameworks */,
 				55903A2C30227FB600C132B9 /* Products */,
+				55FDBAE63059CF1500649A69 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +92,21 @@
 				55903B913022886600C132B9 /* QuizioTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		55FDB8613059C90900649A69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55FDBAE63059CF1500649A69 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				55FDB8603059C55A00649A69 /* Quizio/Core/App/AppConfig.xcconfig */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +129,7 @@
 			);
 			name = Quizio;
 			packageProductDependencies = (
+				55FDB8653059C93D00649A69 /* NetworkLayer */,
 			);
 			productName = Quizio;
 			productReference = 55903A2B30227FB600C132B9 /* Quizio.app */;
@@ -147,6 +187,9 @@
 			);
 			mainGroup = 55903A2230227FB500C132B9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				55FDB8643059C93D00649A69 /* XCLocalSwiftPackageReference "Quizio/Core/Services/NetworkLayer" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 55903A2C30227FB600C132B9 /* Products */;
 			projectDirPath = "";
@@ -324,6 +367,7 @@
 		};
 		55903A3730227FB600C132B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FDB8603059C55A00649A69 /* Quizio/Core/App/AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -331,7 +375,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,6 +407,7 @@
 		};
 		55903A3830227FB600C132B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FDB8603059C55A00649A69 /* Quizio/Core/App/AppConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,7 +415,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,6 +531,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		55FDB8643059C93D00649A69 /* XCLocalSwiftPackageReference "Quizio/Core/Services/NetworkLayer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Quizio/Core/Services/NetworkLayer;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55FDB8653059C93D00649A69 /* NetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55903A2330227FB500C132B9 /* Project object */;
 }
