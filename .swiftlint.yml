@@ -1,0 +1,30 @@
+included:
+  - Quizio
+  - QuizioTests
+
+excluded:
+  - Quizio/Core/Services/NetworkLayer/.build
+  - .build
+
+disabled_rules:
+  - force_try
+  - identifier_name
+  - opening_brace
+
+line_length:
+  warning: 160
+  error: 250
+
+custom_rules:
+  type_brace_on_new_line:
+    name: "Type Brace On New Line"
+    regex: '(class|struct|enum|actor|extension|protocol)\s+[^\n]*\{'
+    message: "Открывающая скобка объявления типа должна быть на следующей строке"
+    severity: error
+  cyrillic_characters:
+    name: "Cyrillic Characters"
+    regex: '[А-Яа-яЁё]+'
+    match_kinds:
+      - identifier
+    message: "Кириллица в коде запрещена — используй английский"
+    severity: error

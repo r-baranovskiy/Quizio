@@ -65,7 +65,8 @@ extension NetworkLayer: INetworkLayer
 }
 
 // MARK: - Private
-private extension NetworkLayer {
+private extension NetworkLayer
+{
     func prepareUrlError(
         from error: URLError
     ) -> NetworkClientError {

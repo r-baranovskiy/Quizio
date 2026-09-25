@@ -6,19 +6,23 @@ public enum DecodeError: Error
     case valueNotFound(description: String)
     case keyNotFound(description: String)
     case `default`(description: String)
-    
+
     static func makeError<T: Decodable>(for type: T.Type, and error: DecodingError) -> DecodeError {
-        switch error {
+        func path(of context: DecodingError.Context) -> String {
+            context.codingPath.map { $0.stringValue }.joined(separator: ".")
+        }
+
+        return switch error {
         case .typeMismatch(let any, let context):
                 .typeMismatch(
-                    description: "Type mismatch for type \(any) in \(T.self) at path: \(context.codingPath.map { $0.stringValue }.joined(separator: "."))")
+                    description: "Type mismatch for type \(any) in \(T.self) at path: \(path(of: context))")
         case .valueNotFound(let any, let context):
                 .valueNotFound(
-                    description: "Value not found for type \(any) in \(T.self) at path: \(context.codingPath.map { $0.stringValue }.joined(separator: "."))"
+                    description: "Value not found for type \(any) in \(T.self) at path: \(path(of: context))"
                 )
         case .keyNotFound(let codingKey, let context):
                 .keyNotFound(
-                    description: "Missing key '\(codingKey.stringValue)' in \(T.self) at path: \(context.codingPath.map { $0.stringValue }.joined(separator: "."))"
+                    description: "Missing key '\(codingKey.stringValue)' in \(T.self) at path: \(path(of: context))"
                 )
         default:
                 .`default`(

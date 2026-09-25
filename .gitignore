@@ -20,5 +20,8 @@ DerivedData/
 timeline.xctimeline
 playground.xcworkspace
 
+# macOS
+.DS_Store
+
 # Локальные конфиги со значениями/секретами (не коммитить)
 *.local.xcconfig

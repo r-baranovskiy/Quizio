@@ -30,7 +30,6 @@
 		55FDB85F3059C55A00649A69 /* Exceptions for "Quizio" folder in "Quizio" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Core/App/AppConfig.local.xcconfig,
 				Core/App/AppConfig.xcconfig,
 				Core/App/Info.plist,
 				Core/Services/NetworkLayer,
@@ -119,6 +118,7 @@
 				55903A2730227FB500C132B9 /* Sources */,
 				55903A2830227FB500C132B9 /* Frameworks */,
 				55903A2930227FB500C132B9 /* Resources */,
+				55FDB8703059C9A000649A6B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -217,6 +217,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55FDB8703059C9A000649A6B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\"\nif command -v swiftlint > /dev/null 2>&1; then\n  swiftlint --config \"${PROJECT_DIR}/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55903A2730227FB500C132B9 /* Sources */ = {
@@ -375,6 +397,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -415,6 +438,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";

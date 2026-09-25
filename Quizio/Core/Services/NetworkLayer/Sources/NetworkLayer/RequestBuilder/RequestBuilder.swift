@@ -16,7 +16,7 @@ public final class RequestBuilder
 {
     private let baseURL: String
     private var config = RequestConfig()
-    
+
     public init(baseURL: String) {
         self.baseURL = baseURL
     }
