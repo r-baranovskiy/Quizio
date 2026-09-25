@@ -8,7 +8,8 @@
 import SwiftUI
 
 @main
-struct QuizioApp: App {
+struct QuizioApp: App
+{
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -16,7 +16,7 @@ final class NetworkLayerTests: XCTestCase
             let expectation = expectation(description: "Test code expectation \(code)")
             let expectedError = NetworkClientError.codeError(error: .clientError(code: code))
             var receivedError: NetworkClientError?
-            
+
             MockURLProtocol.requestHandler = { request in
                 let response = HTTPURLResponse(url: request.url!,
                                              statusCode: code,
@@ -24,7 +24,7 @@ final class NetworkLayerTests: XCTestCase
                                              headerFields: nil)!
                 return (response, Data())
             }
-            
+
             do {
                 let _: MockResponse = try await sut
                     .request(for: TestFactory.urlRequest, with: nil)
@@ -53,7 +53,7 @@ final class NetworkLayerTests: XCTestCase
             let expectation = expectation(description: "Test code expectation \(code)")
             let expectedError = NetworkClientError.codeError(error: .serverError(code: code))
             var receivedError: NetworkClientError?
-            
+
             MockURLProtocol.requestHandler = { request in
                 let response = HTTPURLResponse(url: request.url!,
                                              statusCode: code,
@@ -61,7 +61,7 @@ final class NetworkLayerTests: XCTestCase
                                              headerFields: nil)!
                 return (response, Data())
             }
-            
+
             do {
                 let _: MockResponse = try await sut
                     .request(for: TestFactory.urlRequest, with: nil)
@@ -85,7 +85,7 @@ final class NetworkLayerTests: XCTestCase
         let sut = env.makeSut()
         let expectation = expectation(description: #function)
         var receivedResponse: MockResponse?
-        
+
         MockURLProtocol.requestHandler = { request in
             let response = HTTPURLResponse(url: request.url!,
                                          statusCode: 200,
@@ -120,7 +120,7 @@ final class NetworkLayerTests: XCTestCase
         let expectation = expectation(description: #function)
         let expectedError = NetworkClientError.decodingError(error: .default(description: ""))
         var receivedError: NetworkClientError?
-        
+
         MockURLProtocol.requestHandler = { request in
             let response = HTTPURLResponse(url: request.url!,
                                          statusCode: 200,

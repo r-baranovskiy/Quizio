@@ -8,9 +8,8 @@ protocol IGetBaseUrlUseCase
 final class GetBaseUrlUseCase
 {
     private let configRepository: IConfigRepository
-    
-    init(configRepository: IConfigRepository)
-    {
+
+    init(configRepository: IConfigRepository) {
         self.configRepository = configRepository
     }
 }

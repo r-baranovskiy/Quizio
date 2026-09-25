@@ -5,12 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkLayer",
-    platforms: [.iOS(.v16)],
+    platforms: [.iOS(.v16), .macOS(.v12)],
     products: [
         .library(
             name: "NetworkLayer",
             targets: ["NetworkLayer"]
-        ),
+        )
     ],
     targets: [
         .target(
@@ -19,7 +19,7 @@ let package = Package(
         .testTarget(
             name: "NetworkLayerTests",
             dependencies: ["NetworkLayer"]
-        ),
+        )
     ],
     swiftLanguageModes: [.v6]
 )

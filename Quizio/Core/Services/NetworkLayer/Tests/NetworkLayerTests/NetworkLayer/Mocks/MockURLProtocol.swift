@@ -1,13 +1,14 @@
 import Foundation
 
-final class MockURLProtocol: URLProtocol {
+final class MockURLProtocol: URLProtocol
+{
     nonisolated(unsafe) static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?
 
-    override class func canInit(with request: URLRequest) -> Bool {
+    override static func canInit(with request: URLRequest) -> Bool {
         return true
     }
 
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+    override static func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
 

@@ -33,7 +33,7 @@ final class RequestBuilderTests: XCTestCase
     func test_makeRequest_withHttpMethodPOST_correctCreated() {
         // Given
         let env = Environment()
-        
+
         let sut = env.makeSut(TestFactory.baseURL())
         let expectedRequest = TestFactory.makeRequest(url: TestFactory.baseURL(),
                                                       HTTPMethod: "POST")
@@ -164,15 +164,16 @@ final class RequestBuilderTests: XCTestCase
         // Given
         let env = Environment()
         let sut = env.makeSut(TestFactory.baseURL())
+        let data = Data()
         let expectedRequest = TestFactory.makeRequest(url: TestFactory.baseURL(),
                                                       HTTPMethod: "POST",
-                                                      body: TestFactory.testData)
+                                                      body: data)
         var request: URLRequest?
 
         // When
         do {
             request = try sut
-                .body(TestFactory.testData)
+                .body(data)
                 .httpMethod(.post)
                 .build()
         } catch {
@@ -257,8 +258,6 @@ private extension RequestBuilderTests
 {
     enum TestFactory
     {
-        static let testData = "{\"key\":\"value\"}".data(using: .utf8)!
-
         static func baseURL(_ path: String = "") -> URL {
             let baseURL: URL = URL(string: "https://google.com")!
                 .appending(path: path)
