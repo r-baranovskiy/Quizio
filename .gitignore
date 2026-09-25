@@ -1,65 +1,24 @@
-### Xcode
-# Xcode user settings
+# Xcode
 xcuserdata/
-
-# Xcode build artifacts
-build/
-DerivedData/
-
-# Obj-C/Swift specific
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-# Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Xcode state files
+*.xcuserstate
 *.xccheckout
 *.moved-aside
-*.xcuserstate
 *.xcscmblueprint
 
-
-### Objective-C
-# Xcode user settings
-xcuserdata/
-
-# Xcode build data
+# Build artifacts
+build/
 DerivedData/
-
-# Obj-C/Swift specific
 *.hmap
-
-# App packaging
 *.ipa
-*.dSYM.zip
 *.dSYM
-
-# Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-### Swift
-# Xcode user settings
-xcuserdata/
-
-# Xcode build data
-DerivedData/
-
-# Swift/Obj-C specific
-*.hmap
-
-# App packaging
-*.ipa
 *.dSYM.zip
-*.dSYM
-
-# Playgrounds
-timeline.xctimeline
-playground.xcworkspace
 
 # Swift Package Manager
-# Package.resolved
+.build/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Локальные конфиги со значениями/секретами (не коммитить)
+*.local.xcconfig

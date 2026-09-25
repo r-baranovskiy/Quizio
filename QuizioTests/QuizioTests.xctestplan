@@ -19,6 +19,13 @@
         "identifier" : "55903B903022886600C132B9",
         "name" : "QuizioTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Quizio\/Core\/Services\/NetworkLayer",
+        "identifier" : "NetworkLayerTests",
+        "name" : "NetworkLayerTests"
+      }
     }
   ],
   "version" : 1

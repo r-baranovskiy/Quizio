@@ -30,6 +30,7 @@
 		55FDB85F3059C55A00649A69 /* Exceptions for "Quizio" folder in "Quizio" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Core/App/AppConfig.local.xcconfig,
 				Core/App/AppConfig.xcconfig,
 				Core/App/Info.plist,
 				Core/Services/NetworkLayer,
@@ -375,7 +376,7 @@
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Quizio/Core/App/Info.plist";
+				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -415,7 +416,7 @@
 				DEVELOPMENT_TEAM = X6QCC36TXK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Quizio/Core/App/Info.plist";
+				INFOPLIST_FILE = Quizio/Core/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
